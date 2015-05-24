@@ -1,6 +1,6 @@
 # latest_commits_via_vue.js
 
-在vue.js 示例 **Github 提交**基础上修改
+在vue.js 示例 [**Github 提交**](http://cn.vuejs.org/examples/commits.html)基础上修改
 
 ###实现的功能有
 
