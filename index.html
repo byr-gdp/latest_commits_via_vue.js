@@ -1,0 +1,66 @@
+<!-- 扩展：
+	1. 根据用户查询repo
+	2. 根据repo查询分支
+	3. 根据分支查询提交 可选最近次数 -->
+<link rel="stylesheet" href="style.css">
+<div id="demo">
+	<h1>Latest Commits</h1>
+	<!-- <template v-repeat="b:branches"> -->
+		<div>
+			<label for="username">Username:</label>
+			<input type="text" v-model="username" lazy>
+			<!-- {{username}} -->
+		</div>
+        <hr>
+        <label for="repo">Select A Repository:</label>
+		<ul>
+			<li v-repeat="repos">
+                <input type="radio" name="repo" value="{{name}}" v-model="currentRepo">
+				<span>{{name}}</span>
+            </li>    
+		</ul>
+		<hr>
+        <div>
+            <label for="branch">Select A Branch:</label>
+            <!-- <input type="text" v-model="currentRepo" lazy> -->
+            <!-- {{currentRepo}} -->
+        </div>
+
+		<ul>
+			<li v-repeat="branches">
+                <input type="radio" name="branch" value="{{name}}" v-model="currentBranch">
+				<span class="name">{{name}}</span>
+			</li>
+		</ul>
+
+        <hr>
+        
+        <div>
+            <label for="submit">Submits Num:</label>
+            <input type="number" value="3" min="3" max="20" class="num" v-model="num" lazy>
+            <!-- {{num}} -->
+        </div>
+        <ul>
+            <li v-repeat="commits">
+                <a href="{{html_url}}" target="_blank">{{sha.slice(0,7)}}</a>
+                - <span>{{commit.message | truncate}}</span><br>
+                by <span class="author">{{commit.author.name}}</span>
+                at <span class="name">{{commit.author.date | formatDate}}</span>
+            </li>
+        </ul>
+	<!-- 	<input type="radio" name="branch" id="{{*b}}" value="{{*b}}" v-model="currentBranch">
+		<label for="{{*b}}">{{*b}}</label> -->
+	<!-- </template> -->
+	<!-- <p>byr-gdp/byr-gdp.github.io@{{currentBranch}}</p> -->
+	<!-- <p>yyx990803/vue@{{currentBranch}}</p>
+	<ul>
+		<li v-repeat="commits">
+			<a href="{{html_url}}" target="_blank" class="commit">{{sha.slice(0,7)}}</a>
+			- <span class="message">{{commit.message | truncate}}</span><br>
+			by <span class="author">{{commit.author.name}}</span>
+			at <span class="date">{{commit.author.date | formatDate}}</span>
+		</li>
+	</ul> -->
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/0.11.10/vue.min.js"></script>
+<script src="js.js"></script>
