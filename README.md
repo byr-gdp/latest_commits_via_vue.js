@@ -1,8 +1,10 @@
 # latest_commits_via_vue.js
 
-在vue.js 示例 [**Github 提交**](http://cn.vuejs.org/examples/commits.html)基础上修改
+在vue.js 示例 [**Github 提交**](http://cn.vuejs.org/examples/commits.html)基础上修改  
+基于[vue.js](http://cn.vuejs.org/)框架，在线版本:[latest_commits_via_vus.js](file:///C:/Users/GDP-PC/Desktop/vue.js/demo/Github%20Commit/index.html)
 
-###实现的功能有
+
+### 实现的功能有
 
 1. 根据username查找repo
 2. 根据repo查找branch
