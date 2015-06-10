@@ -1,7 +1,8 @@
 # latest_commits_via_vue.js
 
 在vue.js 示例 [**Github 提交**](http://cn.vuejs.org/examples/commits.html)基础上修改   
-基于[vue.js](http://cn.vuejs.org/)框架，在线版本:[latestGithubCommits](file:///C:/Users/GDP-PC/Desktop/vue.js/demo/Github%20Commit/index.html)
+基于[vue.js](http://cn.vuejs.org/)框架  
+在线版本:[latestGithubCommits](https://byr-gdp.github.io/latest_commits_via_vue.js/)
 
 ### 实现功能
 
